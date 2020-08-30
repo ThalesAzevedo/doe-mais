@@ -12,23 +12,22 @@ class Home extends StatelessWidget {
       endDrawer: DrawerConfig(),
       appBar: AppBar(
         elevation: 0,
-        bottom: PreferredSize(
-          preferredSize: Size.fromHeight(300),
-          child: Container(
-            width: 300,
-            height: 300,
-            child: FlareActor("assets/LogoDoeMais.flr",
-                alignment: Alignment.center,
-                fit: BoxFit.contain,
-                animation: "1"),
-          ),
-        ),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          WaveWidget(),
+          Column(
+            children: [
+              Container(
+                  color: Colors.red[900],
+                  width: MediaQuery.of(context).size.width,
+                  height: 300,
+                  child: FlareActor("assets/LogoDoeMais.flr",
+                      alignment: Alignment.center,
+                      fit: BoxFit.contain,
+                      animation: "1")),
+              WaveWidget(),
+            ],
+          ),
           Spacer(),
           RaisedButton.icon(
             color: Colors.red[900],

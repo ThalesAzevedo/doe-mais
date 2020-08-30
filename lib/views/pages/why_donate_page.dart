@@ -7,15 +7,15 @@ class WhyDonate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red[900],
+      // backgroundColor: Colors.red[900],
       appBar: AppBar(
         title: Text('Porque devo DOAR?'),
         elevation: 0,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Container(
+            color: Colors.red[900],
             height: MediaQuery.of(context).size.height * 0.8,
             padding: const EdgeInsets.all(40),
             child: Column(
@@ -33,7 +33,7 @@ class WhyDonate extends StatelessWidget {
                     ),
                     Expanded(
                       child: Text(
-                        'Você pode ajudar a salvar a vida de outras pessoas.',
+                        'Você pode ajudar a salvar outras pessoas.',
                         overflow: TextOverflow.clip,
                         maxLines: 2,
                         style: TextStyle(
@@ -79,7 +79,7 @@ class WhyDonate extends StatelessWidget {
                     ),
                     Expanded(
                       child: Text(
-                        'É rápido! Todo processo, leva menos de 45 minutos.',
+                        'É rápido! Todo processo é menos de 45 minutos.',
                         overflow: TextOverflow.clip,
                         maxLines: 2,
                         style: TextStyle(
@@ -184,10 +184,7 @@ class WhyDonate extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            color: Colors.white,
-            child: WaveWidget(),
-          ),
+          WaveWidget(),
         ],
       ),
     );

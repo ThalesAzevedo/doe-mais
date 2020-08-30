@@ -10,11 +10,7 @@ import 'package:flutter/material.dart';
 class DrawerConfig extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var user = User(
-      name: 'Thales C. Azevedo',
-      userAvatar:
-          'https://www.pinclipart.com/picdir/middle/148-1486972_mystery-man-avatar-circle-clipart.png',
-    );
+    var loggedIn = true;
     return Drawer(
       child: ListView(
         children: <Widget>[
@@ -31,7 +27,7 @@ class DrawerConfig extends StatelessWidget {
                       fit: BoxFit.contain,
                       animation: "1"),
                 ),
-                user.loggedIn // Conditinal to verify user login.
+                loggedIn // Conditinal to verify user login.
                     ? Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[

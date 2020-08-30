@@ -36,3 +36,13 @@ class User {
     print(subscription);
   }
 }
+
+User user = User(
+  id: 0001,
+  name: 'Thales C. Azevedo',
+  bloodType: 'B+',
+  userAvatar:
+      'https://www.pinclipart.com/picdir/middle/148-1486972_mystery-man-avatar-circle-clipart.png',
+  subscription: [''],
+  userLevel: 1,
+);
